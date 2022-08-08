@@ -13,7 +13,7 @@
 </head>
 <body>
     <!-- navbar+category 부분  -->
-    <ul>
+    <ul class="header">
         <!-- navbar 부분  -->
         <ul class="navbar">  
             <ul class="navbar_title">
@@ -25,7 +25,10 @@
             <ul class="navbar_button">
                 <li><input type='button' value='어디든지'/></li>
                 <li><input type='button' value='언제든 일주일'/></li>
-                <li><input type='button' value='게스트 추가'/></li>
+                <ul class="add_gest">
+                    <li><input type='button' value='게스트 추가'/></li>
+                    <li><button><i class="fa-brands fa-airbnb"></i></button></li>
+                </ul>
             </ul>
             <!-- icon 3개 -->
             <ul class="navbar_icon">
@@ -63,10 +66,12 @@
                 <ul class="product_first_1">
                     <li><img src="./img/탈랑, 태국.webp"/ width="100%" height="300" alt="img"></li>
                     <li>
-                        탈랑, 태국                  NEW
-                        디자인: Jean-Michel Gathy 
-                        11월 6일~11일 
-                        ₩6,209,068 /박
+                        <ul style="display:flex; justify-content: space-between;"><li><span style="font-weight: bold;">탈랑, 태국</span></li> <li>★NEW<br></li></ul>
+                        <div class="product_mid_font">
+                            디자인: Jean-Michel Gathy<br>
+                            11월 6일~11일<br>
+                        </div>
+                        <span style="font-weight: bold;">₩6,209,068</span> /박<br>
                     </li>
                 </ul>
             </a>
@@ -75,10 +80,12 @@
                 <ul class="product_first_2">
                     <li><img src="./img/koh Samui, 태국.webp"/ width="100%" height="300" alt="img"></li>
                     <li>
-                        Koh Samui, 태국
-                        디자인: Gary Fell, GFAB Architects
-                        8월 8일~14일
-                        ₩5,633,075 /박
+                        <span style="font-weight: bold;">Koh Samui, 태국</span>                  NEW<br>
+                        <div class="product_mid_font">
+                            디자인: Gary Fell, GFAB Architects<br>
+                            8월 8일~14일<br>
+                        </div>
+                        <span style="font-weight: bold;">₩5,633,075 </span>/박<br>
                     </li>
                 </ul> 
             </a>
@@ -87,10 +94,13 @@
                 <ul class="product_first_3">
                     <li><img src="./img/Thep Krasatti, 태국.webp"/ width="100%" height="300" alt="img"></li>
                     <li>
-                        Tambon Thep Krasatti, 태국
-                        디자인: Fredo Taffin
-                        8월 7일~12일
-                        ₩19,564,875 /박
+                        <span style="font-weight: bold;">Tambon Thep Krasatti, 태국</span>                  NEW<br>
+                        <div class="product_mid_font">
+                            디자인: Fredo Taffin<br>
+                            8월 7일~12일<br>
+                        </div>
+                        
+                        <span style="font-weight: bold;">₩19,564,875</span> /박<br>
                     </li>
                 </ul>  
             </a>
@@ -99,20 +109,75 @@
                 <ul class="product_first_4">
                     <li><img src="./img/Balamban, 필리핀.webp"/ width="100%" height="300" alt="img"></li>
                     <li>
-                        Balamban, 필리핀
-                        Forbes에 소개
-                        8월 20일~25일
-                        ₩348,928 /박
+                        <span style="font-weight: bold;">Balamban, 필리핀</span>                  NEW<br>
+                        <div class="product_mid_font">
+                            Forbes에 소개<br>
+                            8월 20일~25일<br>
+                        </div>
+                        
+                        <span style="font-weight: bold;">₩348,928</span> /박<br>
                     </li>
                 </ul>
             </a>
         </ul>
 
-        <ul>            <!-- 두 번째 줄 -->
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+        <ul class="product_second">            <!-- 두 번째 줄 -->
+            <a href="#">
+                <ul class="product_second_1">
+                    <li><img src="./img/Raa Atoll, 몰디브.webp"/ width="100%" height="300" alt="img"></li>
+                    <li>
+                        <span style="font-weight: bold;">Raa Atoll, 몰디브</span>                  NEW<br>
+                        <div class="product_mid_font">
+                            6,519km 거리<br>
+                            8월 15일~22일<br>
+                        </div>
+                        
+                        <span style="font-weight: bold;">₩1,349,777</span> /박<br>
+                    </li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul class="product_second_2">
+                    <li><img src="./img/MV, 몰디브.webp"/ width="100%" height="300" alt="img"></li>
+                    <li>
+                        <span style="font-weight: bold;">MV, 몰디브</span>                  NEW<br>
+                        <div class="product_mid_font">
+                            6,596km 거리<br>
+                            8월 11일~16일<br>
+                        </div>
+                        
+                        <span style="font-weight: bold;">₩782,567</span> /박<br>
+                    </li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul class="product_second_3">
+                    <li><img src="./img/EI Nido, 필리핀.webp"/ width="100%" height="300" alt="img"></li>
+                    <li>
+                        <span style="font-weight: bold;">El Nido, 필리핀</span>                  NEW<br>
+                        <div class="product_mid_font">
+                            3,010km 거리<br>
+                            8월 9일~14일<br>
+                        </div>
+                        
+                        <span style="font-weight: bold;">₩85,242</span> /박<br>
+                    </li>
+                </ul>
+            </a>
+            <a href="#">
+                <ul class="product_second_4">
+                    <li><img src="./img/Anambas, 인도네시아.webp"/ width="100%" height="300" alt="img"></li>
+                    <li>
+                        <span style="font-weight: bold;">Anambas, 인도네시아</span>                  NEW<br>
+                        <div class="product_mid_font">
+                            4,359km 거리<br>
+                            8월 8일~13일<br>
+                        </div>
+                        
+                        <span style="font-weight: bold;">₩131,361</span> /박<br>
+                    </li>
+                </ul>
+            </a>
         </ul>
         <ul>            <!-- 세 번째 줄 -->
             <li></li>
