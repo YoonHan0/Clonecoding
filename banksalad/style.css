@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     padding: 0px;
     margin: 0px;
@@ -89,4 +90,319 @@ header {
     color: white;
 
     border-radius: 5px;
+=======
+* {
+    padding: 0px;
+    margin: 0px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+ul {
+    list-style:none;
+}
+body {
+    background-color: rgb(244, 241, 248);
+}
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.all_contents {
+    display: flex;
+    flex-direction: column;
+}
+
+.header_first {             /* header 첫 줄 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px 30px 5px 20px;         /* 위부터 시계 방향으로 */
+    background-color: rgb(244, 241, 248);
+}
+
+.header_first div :nth-child(1){             /* 뱅크샐러드 앱 다운로드 Btn */
+    background-color: white;
+    border: 1px solid rgb(235, 222, 222);
+    border-radius: 5px 5px 5px 5px;
+
+    font-weight: bold;
+    font-size: 12px;
+
+    padding: 3px;
+    margin-right: 5px;
+}
+.header_first div :nth-child(2) {              /* 인증서 센터 a tag */
+    color: gray;
+    border: 1px solid rgb(235, 222, 222);
+    border-radius: 5px 5px 5px 5px;
+    background-color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    padding: 3px;
+}
+
+.header_first ul{             /* 자주 묻는 질문 | 고객안심센터 | 뱅샐머니(송금) */
+    font-size: 12px;  
+}
+.header_first ul a{             /* 자주 묻는 질문 | 고객안심센터 | 뱅샐머니(송금) */
+    font-size: 12px;
+    padding: 0px 10px 0px 10px;  /* padding-right, left */
+}
+
+.header_first ul a:nth-child(1),
+.header_first ul a:nth-child(2){             /* 자주 묻는 질문 | 고객안심센터 | 뱅샐머니(송금) */
+    border-right: 1px gray solid;  
+}
+
+.header_second {
+    display: flex;
+    align-items: center;
+
+    background-color: white;
+    border-top: 1px solid rgb(189, 188, 188);
+    border-bottom: 1px solid rgb(189, 188, 188);
+}
+
+.header_second .title {
+    font-weight: bold;
+    font-size: 26px;
+
+    margin : 0px 24px 0px 0px;
+    padding: 12px;
+}
+
+
+.header_second .category a {
+    padding: 0px 12px 0px 12px;
+}
+/* --------------------------------------- container_card_list ------------------------------------------------------- */
+
+.container_card_list {
+    margin: 10px 0px;
+}
+
+.card_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_card_list .card_list section {
+    background-color: white;
+    padding: 10px;
+    margin-right: 10px;
+
+    font-size: 15px;
+}
+
+.container_card_list .card_list a {
+    padding: 16px 6px;
+    background-color: rgb(122, 145, 122);
+    color: white;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* --------------------------------------- container_slider ------------------------------------------------------- */
+
+.container_slider {
+    position: relative;             /* contain안의 상대적인 위치를 조정할 수 있음 top, left, right, botton같은 속성으로 */
+    width: 100%;
+    height: 480px;
+
+    margin-left: auto;              /* auto로 가운데 정렬 */
+    margin-right: auto;
+    overflow: hidden;
+    z-index: 0;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1);;
+    /*transform의 수행 과정을 1초에 걸쳐서 방식으로 보여달라*/
+    /*  https://easings.net/    */
+}
+#firstSlide {
+    background-color: skyblue;
+    color:white;
+    left: 0;
+}
+#secondSlide {
+    background-color: orange;
+    color: white;
+    left: 100%;
+}
+#thirdSlide {
+    background-color: bisque;
+    left: 200%;
+}
+#first:checked ~ .slide {transform: translateX(0);}
+#second:checked ~ .slide {transform: translateX(-100%);}
+#third:checked ~ .slide {transform: translateX(-200%);}
+/* 체크되면 하위(~) 클래스 .slide들을 수행한다 transform: translateX() */
+#first:checked ~ .labelList label:nth-child(1),
+#second:checked ~ .labelList label:nth-child(2),
+#third:checked ~ .labelList label:nth-child(3) {
+    opacity: 0.8;
+}
+#first:checked ~ .labelList label:nth-child(1)::after,
+#second:checked ~ .labelList label:nth-child(2)::after,
+#third:checked ~ .labelList label:nth-child(3)::after {
+    opacity: 1;
+}
+
+
+.container_slider input {
+    display: none;
+}
+.container_slider .labelList {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    z-index: 1;
+}
+.container_slider .labelList label {
+    width: 24px;
+    height: 24px;
+    padding: 16px;
+    opacity: 0.3;
+    cursor: pointer;
+    position: relative;
+    transition: opacity 0.6s ease-in-out;
+}
+.container_slider .labelList label::before,
+.container_slider .labelList label::after {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.container_slider .labelList label::before {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+}
+.container_slider .labelList label::after {
+    width: 24px;
+    height: 24px;
+    border: 1px solid white;
+    opacity: 0;
+}
+
+/* --------------------------------------- section_4 ------------------------------------------------------- */
+
+.section_4 {
+    text-align: center;
+
+    padding: 60px 0px;
+    margin-bottom: 10px;
+
+    background-color: white;
+}
+.section_4 h3 {
+    color: rgb(143, 139, 139);
+}
+.section_4 strong {
+    font-size: 28px;
+}
+.section_4 .section_4_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 30px auto 0px auto;
+}
+.section_4 .section_4_list li {
+    padding: 0px 30px;
+}
+.section_4 .section_4_list li i{
+    font-size: 70px;
+
+    margin-bottom: 20px;
+}
+.section_4 .section_4_list span{
+    color: gray;
+}
+.section_4 .section_4_list h2{
+   font-size: 23px;
+}
+
+/* --------------------------------------- section_5 ------------------------------------------------------- */
+
+.section_5 {
+    display: block;
+    width: 100%;
+    background-color: white;
+
+    padding: 48px 0px;
+}
+.section_5 .section_5_container {
+    display: block;
+    margin-left: auto;                              
+    margin-right: auto;
+    padding: 0px 32px;
+    
+}
+.section_5 .section_5_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+
+    width: 100%;
+}
+
+.section_5 .section_5_list .section_5_contents{        /* img+contentsbox */
+    display: block;
+    position: relative;
+    border: 1px solid rgb(158, 155, 155);
+    width: 200px;
+}
+.section_5 .section_5_list .section_5_contents a{      /* section_5_contents 위에 a태그 덮어쓰기 */
+    font-size:0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: 70%;
+}
+.section_5 .section_5_list .section_5_contentsBox {     /* contentsbox */
+    display: block;
+    padding: 10px;
+}
+
+.section_5 .section_5_list .section_5_contentsBox h3 {     /* contentsbox */
+    margin-bottom: 40px;
+}
+
+
+.section_5 .section_5_list .section_5_contentsBox .section_5_contentsBox_Btn {      /* contentsbox안에 있는 Btn 그룹 */
+    position: absolute;
+
+    right: 10px;
+    bottom: 10px;
+}
+
+.section_5 .section_5_list .section_5_contentsBox .section_5_contentsBox_Btn button{      /* Btn 그룹안에 있는 Btn */
+    background-color: white;
+    color: rgb(129, 126, 126);
+    border: 2px solid rgb(199, 196, 196);
+
+    padding: 5px 10px;
+>>>>>>> d210d50 (slide, section 추가)
 }
