@@ -12,9 +12,13 @@ ul {
 body {
     background-color: rgb(244, 241, 248);
 }
-header {
+header {                    /* header 부분 카테고리도 포함해서 */
     display: flex;
     flex-direction: column;
+    position:-webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;            /* slide의 z-index:0보다  header의 z-index가 더 커서 위로 배치됨*/
 }
 
 .all_contents {
@@ -69,6 +73,7 @@ header {
 
 .header_second {
     display: flex;
+    position: relative;
     align-items: center;
 
     background-color: white;
@@ -84,10 +89,10 @@ header {
     padding: 12px;
 }
 
-
 .header_second .category a {
     padding: 0px 12px 0px 12px;
 }
+
 /* --------------------------------------- container_card_list ------------------------------------------------------- */
 
 .container_card_list {
