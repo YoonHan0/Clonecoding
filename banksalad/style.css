@@ -92,6 +92,37 @@ header {                    /* header 부분 카테고리도 포함해서 */
 .header_second .category a {
     padding: 0px 12px 0px 12px;
 }
+.header_second .category a:hover {          
+    /* hover되면 display가 변경되면서 출력됨 */
+    color: rgb(236, 164, 29);
+}
+/* ------------------------------- category hover 했을 때만 나오는 리스트 ----------------------------------- */
+.category_in_container {
+    position: relative;
+}
+.category_in_list_1 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding-left: 220px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    font-size: 15px;
+
+    background-color: rgb(248, 247, 247);
+}
+.category_in_container .category_in_list_1 .list_title {
+    font-weight: bold;
+}
+.category_in_list_1 ul:nth-of-type(1) {
+    padding-right: 50px;
+}
+.category_in_list_1 ul li{
+    padding-bottom: 20px;
+}
 
 /* --------------------------------------- container_card_list ------------------------------------------------------- */
 
