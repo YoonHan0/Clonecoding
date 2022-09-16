@@ -132,9 +132,12 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 90%;
 
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
     
     padding-left: 140px;
     padding-right: 140px;
@@ -156,13 +159,35 @@ button {
 .category button:checked {
     color: black;
 }
-.category button i:nth-child(1){
+.category button i:nth-child(1){        /**/
     font-size: 20px;
 } 
 .category button:hover {
     color: black;
     border-bottom: rgb(230, 221, 221) solid 2px;
 }
+
+.category .fa-arrow-left {              /* 화살표 */
+    padding: 5px;
+    margin-right: 3px;
+    border-radius: 50%;
+    border: 2px solid rgb(207, 202, 202);    
+}
+.category .fa-arrow-left:hover {
+    transition: all .2s ease-in-out;  
+    transform: scale(1.1);
+}
+.category .fa-arrow-right {
+    padding: 5px;
+    margin-left: 3px;
+    border-radius: 50%;
+    border: 2px solid rgb(207, 202, 202);
+}
+.category .fa-arrow-right:hover {
+    transition: all .2s ease-in-out;  
+    transform: scale(1.1);
+}
+
 
 /* -----------------------------------------------------------  product   ----------------------------------------------------------------*/
 
